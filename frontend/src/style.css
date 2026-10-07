@@ -1,7 +1,16 @@
 body { margin: 0; font-family: Georgia, serif; background: #f3ece3; color: #3a2a1d; }
-.wrap { max-width: 920px; margin: 0 auto; padding: 28px 16px 48px; }
+.wrap { max-width: 920px; margin: 0 auto; padding: 20px 16px 48px; }
+.topbar { display: flex; align-items: center; gap: 18px; background: #3a2a1d; color: #f3ece3; padding: 10px 18px; }
+.topbar .brand { font-weight: bold; font-size: 1.08em; }
+.topbar nav { display: flex; gap: 8px; flex: 1; }
+.topbar nav button { background: transparent; color: #e8dcc9; border: 1px solid #6b5a48; border-radius: 6px; cursor: pointer; }
+.topbar nav button.on { background: #c45c26; color: #fff; border-color: #c45c26; }
+.topbar .who { font-size: 0.9em; color: #e8dcc9; }
+.topbar .who button { margin-left: 8px; }
 .row { display: flex; gap: 10px; overflow-x: auto; padding-bottom: 12px; }
-.kettle { min-width: 110px; min-height: 140px; border-radius: 50% 50% 12px 12px; color: #fff; border: 0; cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.kettle { min-width: 120px; min-height: 132px; border-radius: 50% 50% 12px 12px; color: #fff; border: 0; cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; padding: 8px; }
+.kettle small { font-size: 0.72em; opacity: 0.92; }
+.kettle.pick { outline: 3px solid #3a2a1d; outline-offset: 2px; }
 .cold { background: #6d7c8b; }
 .boiling { background: #c45c26; }
 .drawn { background: #6f7d4e; }
@@ -9,3 +18,11 @@ body { margin: 0; font-family: Georgia, serif; background: #f3ece3; color: #3a2a
 .hint { color: #6b5a48; font-size: 0.92em; }
 label { display: block; margin: 8px 0; }
 input, button { font: inherit; padding: 8px 10px; margin: 4px 6px 4px 0; }
+.drawer, .stamppanel { background: #fffaf1; border: 1px solid #d9c8b2; border-radius: 10px; padding: 14px 18px; margin-top: 8px; }
+.stamptable { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 0.94em; }
+.stamptable th, .stamptable td { border: 1px solid #d9c8b2; padding: 7px 9px; text-align: left; }
+.stamptable thead { background: #eadcc7; }
+.stamptable tr.revoked td { color: #9a8a76; text-decoration: line-through; }
+button.revoke { background: #9b1c1c; color: #fff; border: 0; border-radius: 6px; cursor: pointer; padding: 5px 12px; }
+.submitbook { border-top: 1px dashed #cbb89e; margin-top: 12px; padding-top: 10px; }
+.submitbook input { min-width: 260px; }

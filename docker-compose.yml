@@ -9,12 +9,12 @@ services:
       - "6320:5432"
     volumes:
       - gluekettle_4920_8920_6320_pg:/var/lib/postgresql/data
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U gluekettle -d gluekettle"]
-      interval: 5s
-      timeout: 5s
-      retries: 30
-      start_period: 40s
+    # healthcheck:
+    #   test: ["CMD-SHELL", "pg_isready -U gluekettle -d gluekettle"]
+    #   interval: 5s
+    #   timeout: 5s
+    #   retries: 30
+    #   start_period: 40s
 
   backend:
     build: ./backend
@@ -24,8 +24,7 @@ services:
     ports:
       - "8920:8790"
     depends_on:
-      db:
-        condition: service_healthy
+      - db
 
   frontend:
     build: ./frontend
