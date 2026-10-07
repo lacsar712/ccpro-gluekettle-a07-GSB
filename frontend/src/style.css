@@ -1,11 +1,38 @@
 body { margin: 0; font-family: Georgia, serif; background: #f3ece3; color: #3a2a1d; }
-.wrap { max-width: 920px; margin: 0 auto; padding: 28px 16px 48px; }
-.row { display: flex; gap: 10px; overflow-x: auto; padding-bottom: 12px; }
-.kettle { min-width: 110px; min-height: 140px; border-radius: 50% 50% 12px 12px; color: #fff; border: 0; cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 28px 16px 48px; }
+
+.topbar { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; border-bottom: 2px solid #d8c7b2; padding-bottom: 12px; }
+.topbar h1 { font-size: 1.4em; margin: 0; }
+.topbar nav { display: flex; gap: 8px; }
+.topbar nav a { text-decoration: none; color: #6b4a2f; padding: 7px 14px; border-radius: 8px; background: #e7d9c6; font-weight: bold; }
+.topbar nav a.on { background: #c45c26; color: #fff; }
+.topbar .who { margin-left: auto; font-size: 0.92em; color: #6b5a48; }
+.sub { color: #6b5a48; font-size: 0.95em; }
+
+.row { display: flex; gap: 10px; overflow-x: auto; padding: 6px 0 14px; }
+.kettle { min-width: 118px; min-height: 140px; border-radius: 50% 50% 12px 12px; color: #fff; border: 0; cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; }
+.kettle.pick { outline: 3px solid #3a2a1d; }
+.kettle small { font-size: 0.72em; opacity: 0.92; }
 .cold { background: #6d7c8b; }
 .boiling { background: #c45c26; }
 .drawn { background: #6f7d4e; }
+
+.drawer { background: #fffaf2; border: 1px solid #e0d0bb; border-radius: 10px; padding: 16px 18px; }
+.statusbtns { margin-top: 10px; }
+.ok { color: #4a6b2e; font-weight: bold; }
+.no { color: #9b1c1c; font-weight: bold; }
+.blocked { opacity: 0.45; }
+
 .err { color: #9b1c1c; }
 .hint { color: #6b5a48; font-size: 0.92em; }
 label { display: block; margin: 8px 0; }
-input, button { font: inherit; padding: 8px 10px; margin: 4px 6px 4px 0; }
+input, button, select { font: inherit; padding: 8px 10px; margin: 4px 6px 4px 0; }
+
+.filter { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin: 10px 0; }
+.stamptable { width: 100%; border-collapse: collapse; background: #fffaf2; }
+.stamptable th, .stamptable td { border: 1px solid #e0d0bb; padding: 8px 10px; text-align: left; font-size: 0.94em; }
+.stamptable th { background: #e7d9c6; }
+.stamptable tr.withdrawn td { opacity: 0.55; text-decoration: line-through; }
+.stamptable tr.withdrawn td.ops, .stamptable tr.withdrawn .stamper-cell { text-decoration: none; }
+.stamptable tr.sealed { background: #eef2e4; }
+.nameedit { width: 120px; }
